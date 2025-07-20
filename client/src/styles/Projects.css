@@ -1,0 +1,454 @@
+/* Projects Layout */
+.projects-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #fdb99b, #cf8bf3, #a770ef);
+  color: white;
+  position: relative;
+}
+
+/* Header Styles - Matching Profile */
+.projects-header {
+  width: 100%;
+  padding: 2rem 0;
+  color: white;
+  background: transparent;
+}
+
+.projects-header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.projects-header-left {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.projects-header-left h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.projects-subtitle {
+  margin: 0.5rem 0 0;
+  opacity: 0.9;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.projects-header-actions {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.projects-back-btn {
+  background: #4a90e2;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(0, 70, 161, 0.3);
+}
+
+.projects-back-btn:hover {
+  background: rgb(0, 50, 120);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 70, 161, 0.4);
+}
+
+.create-project-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  background: #00c853;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 200, 83, 0.3);
+}
+
+.create-project-button:hover {
+  background: #00b84d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 200, 83, 0.4);
+}
+
+/* Projects List */
+.projects-list-container {
+  padding: 2rem 6rem;
+  width: 100%;
+  flex: 1;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.project-item {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem 2rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.project-item-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.project-type-badge {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.project-type-badge.personal {
+  background: #4a90e2;
+}
+
+.project-type-badge.collaborative {
+  background: #00c853;
+}
+
+.project-type-badge:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project-item-description {
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Update the no projects message */
+.project-item[style*="text-align: center"] {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+}
+
+.project-item[style*="text-align: center"] h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-item[style*="text-align: center"] p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.project-type-modal {
+  position: relative;
+  background: #ffffff;
+  color: #1e1e1e;
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 90%;
+  max-width: 600px;
+  z-index: 1000;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  animation: fadeInScale 0.3s ease;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.project-type-modal h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-type-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.project-type-option {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.project-type-option:hover:not(.disabled) {
+  background: #f1f1f1;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.project-type-option.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.project-type-option h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.project-type-option p {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Close Button */
+.project-type-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.project-type-modal-close:hover {
+  color: #333;
+}
+
+/* Error Message */
+.error-message {
+  background: rgba(255, 59, 48, 0.1);
+  color: #ff3b30;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin: 1rem 6rem;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 59, 48, 0.2);
+}
+
+.success-message {
+  background: #28a745 !important;
+  color: #fff !important;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  margin: 1rem 6rem;
+  text-align: center;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(40, 167, 69, 0.15);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999; /* lower than modal's 1000 but still high */
+}
+
+/* Remove or set to transparent any background/background-color on main/root containers */
+.projects-container, .projects-list, .modal-content, .modal-overlay {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .projects-header,
+  .projects-list-container {
+    padding: 2rem 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-header {
+    padding: 1rem;
+  }
+
+  .projects-header-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1rem;
+  }
+
+  .projects-header-left {
+    text-align: center;
+    justify-content: center;
+  }
+
+  .projects-header-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .projects-header-actions {
+    width: 100%;
+    flex-direction: row;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .projects-back-btn,
+  .create-project-button {
+    width: auto;
+    justify-content: center;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .projects-list-container {
+    padding: 1rem;
+  }
+
+  .project-item {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .project-item-title {
+    font-size: 1.2rem;
+  }
+
+  .project-type-badge {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .project-item-description {
+    font-size: 0.9rem;
+  }
+
+  .project-type-modal {
+    width: 95%;
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .project-type-modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-type-options {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-type-option {
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .project-type-option h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-type-option p {
+    font-size: 0.9rem;
+  }
+
+  .error-message,
+  .success-message {
+    margin: 0.5rem 1rem;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-type-badge {
+    height: 1.6rem;
+    line-height: 1.6rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* keep font-size and text as is */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-type-badge {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    /* keep font-size and text as is */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
