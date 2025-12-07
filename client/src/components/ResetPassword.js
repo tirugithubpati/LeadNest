@@ -99,8 +99,8 @@ const ResetPassword = () => {
   return (
     <div className="reset-container">
       <div className="reset-logo-section">
-        <img src="/logo.png" alt="KarmaSync Logo" className="reset-logo" />
-        <div className="reset-logo-text">KarmaSync</div>
+        <img src="/logo.png" alt="LeadNest Logo" className="reset-logo" />
+        <div className="reset-logo-text">LeadNest</div>
       </div>
       <div className="reset-content">
         <div className="reset-card">

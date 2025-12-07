@@ -48,8 +48,8 @@ const ForgotPassword = () => {
   return (
     <div className="forgot-container">
       <div className="forgot-logo-section">
-        <img src="/logo.png" alt="KarmaSync Logo" className="forgot-logo" />
-        <div className="forgot-logo-text">KarmaSync</div>
+        <img src="/logo.png" alt="LeadNest Logo" className="forgot-logo" />
+        <div className="forgot-logo-text">LeadNest</div>
       </div>
       <div className="forgot-content">
         <div className="forgot-card">

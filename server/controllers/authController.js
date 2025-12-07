@@ -34,7 +34,7 @@ transporter.verify(function(error, success) {
 
 const emailTemplates = {
   welcome: (user) => ({
-    subject: 'Welcome to KarmaSync!',
+    subject: 'Welcome to LeadNest!',
     html: `
       <!DOCTYPE html>
       <html>
@@ -117,12 +117,12 @@ const emailTemplates = {
         <body>
           <div class="container">
           <div class="header">
-            <h1>Welcome to KarmaSync!</h1>
+            <h1>Welcome to LeadNest!</h1>
           </div>
           <div class="content">
               <p class="welcome-text">Hello ${user.fullName},</p>
-            <p>Welcome to KarmaSync - Your Collaborative Workspace for Smarter Project Management!</p>
-              <p>KarmaSync is a modern, lightweight project management tool built for teams and individuals to stay organized, productive, and in sync.</p>
+            <p>Welcome to LeadNest - Your Collaborative Workspace for Smarter Project Management!</p>
+              <p>LeadNest is a modern, lightweight project management tool built for teams and individuals to stay organized, productive, and in sync.</p>
             
               <div class="feature-list">
             <h3>🚀 Key Features</h3>
@@ -138,7 +138,7 @@ const emailTemplates = {
             <p>We're excited to have you on board! If you have any questions or need assistance, feel free to reach out to our support team.</p>
           </div>
           <div class="footer">
-              <div class="copyright">© ${new Date().getFullYear()} KarmaSync. Licensed under the MIT License.</div>
+              <div class="copyright">© ${new Date().getFullYear()} LeadNest. Licensed under the MIT License.</div>
             </div>
           </div>
         </body>
@@ -146,7 +146,7 @@ const emailTemplates = {
     `
   }),
   resetPassword: (user, resetUrl) => ({
-    subject: 'Reset Your KarmaSync Password',
+    subject: 'Reset Your LeadNest Password',
     html: `
       <!DOCTYPE html>
       <html>
@@ -254,7 +254,7 @@ const emailTemplates = {
             </div>
           </div>
           <div class="footer">
-              <div class="copyright">© ${new Date().getFullYear()} KarmaSync. Licensed under the MIT License.</div>
+              <div class="copyright">© ${new Date().getFullYear()} LeadNest. Licensed under the MIT License.</div>
             </div>
           </div>
         </body>
@@ -336,7 +336,7 @@ const emailTemplates = {
             <div class="content">
               <p>Hello ${collaborator.fullName},</p>
               
-              <p>You've been added to a new project on KarmaSync!</p>
+              <p>You've been added to a new project on LeadNest!</p>
               
               <div class="project-details">
                 <h3>Project Details</h3>
@@ -348,10 +348,10 @@ const emailTemplates = {
 
               <p>You can now access the project and start collaborating with your team members.</p>
               
-              <p>—<br>The KarmaSync Team</p>
+              <p>—<br>The LeadNest Team</p>
             </div>
             <div class="footer">
-              <div class="copyright">© ${new Date().getFullYear()} KarmaSync. Licensed under the MIT License.</div>
+              <div class="copyright">© ${new Date().getFullYear()} LeadNest. Licensed under the MIT License.</div>
             </div>
           </div>
         </body>
@@ -499,7 +499,7 @@ exports.signup = async (req, res) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-        subject: 'Verify Your Email - KarmaSync',
+        subject: 'Verify Your Email - LeadNest',
         html: `
           <!DOCTYPE html>
           <html>
@@ -573,7 +573,7 @@ exports.signup = async (req, res) => {
                 <h1>Verify Your Email</h1>
               </div>
               <div class="content">
-                <p>Thank you for signing up with KarmaSync! To complete your registration, please use the following OTP to verify your email address:</p>
+                <p>Thank you for signing up with LeadNest! To complete your registration, please use the following OTP to verify your email address:</p>
                 
                 <div class="otp-container">
                 <div class="otp-code">${otp}</div>
@@ -584,7 +584,7 @@ exports.signup = async (req, res) => {
                 </p>
               </div>
               <div class="footer">
-                <div class="copyright">© ${new Date().getFullYear()} KarmaSync. Licensed under the MIT License.</div>
+                <div class="copyright">© ${new Date().getFullYear()} LeadNest. Licensed under the MIT License.</div>
               </div>
               </div>
             </body>
@@ -633,7 +633,7 @@ exports.verifyOTP = async (req, res) => {
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: email,
-        subject: 'Welcome to KarmaSync!',
+        subject: 'Welcome to LeadNest!',
         html: `
           <!DOCTYPE html>
           <html>
@@ -706,12 +706,12 @@ exports.verifyOTP = async (req, res) => {
             <body>
               <div class="container">
               <div class="header">
-                  <h1>Welcome to Karma Sync! 🌟</h1>
+                  <h1>Welcome to LeadNest! 🌟</h1>
               </div>
               <div class="content">
                   <p>We're excited to have you on board!</p>
                   
-                  <p>Karma Sync is your all-in-one productivity hub designed to help you stay organized, whether you're working solo or collaborating with a team.</p>
+                  <p>LeadNest is your all-in-one productivity hub designed to help you stay organized, whether you're working solo or collaborating with a team.</p>
                   
                   <div class="feature-list">
                     <p><strong>Here's what you can do:</strong></p>
@@ -722,10 +722,10 @@ exports.verifyOTP = async (req, res) => {
 
                   <p>Let's get started and turn your tasks into accomplishments 🚀</p>
                   
-                  <p>—<br>The Karma Sync Team</p>
+                  <p>—<br>The LeadNest Team</p>
               </div>
               <div class="footer">
-                  <div class="copyright">© ${new Date().getFullYear()} KarmaSync. Licensed under the MIT License.</div>
+                  <div class="copyright">© ${new Date().getFullYear()} LeadNest. Licensed under the MIT License.</div>
                 </div>
               </div>
             </body>
@@ -746,7 +746,7 @@ exports.verifyOTP = async (req, res) => {
     delete userResponse.password;
 
     res.status(200).json({ 
-      message: 'Email verified successfully. Welcome to KarmaSync!',
+      message: 'Email verified successfully. Welcome to LeadNest!',
       token,
       user: userResponse
     });
@@ -778,10 +778,10 @@ exports.resendOTP = async (req, res) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'New OTP for Email Verification - KarmaSync',
+      subject: 'New OTP for Email Verification - LeadNest',
         html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f8f9fa; border-radius: 10px;">
-          <h2 style="color: #333; text-align: center; margin-bottom: 20px;">New OTP for KarmaSync</h2>
+          <h2 style="color: #333; text-align: center; margin-bottom: 20px;">New OTP for LeadNest</h2>
           <p style="color: #666; font-size: 16px; line-height: 1.5; margin-bottom: 20px;">
             Here is your new OTP to verify your email address:
           </p>
@@ -793,7 +793,7 @@ exports.resendOTP = async (req, res) => {
           </p>
           <div style="text-align: center; margin-top: 30px;">
             <p style="color: #999; font-size: 12px;">
-              © ${new Date().getFullYear()} KarmaSync. Licensed under the MIT License.
+              © ${new Date().getFullYear()} LeadNest. Licensed under the MIT License.
             </p>
                 </div>
               </div>

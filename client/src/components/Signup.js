@@ -163,8 +163,8 @@ const Signup = () => {
   return (
     <div className="auth-container">
       <div className="auth-logo-section">
-        <img src="/logo.png" alt="KarmaSync Logo" className="auth-logo" />
-        <div className="auth-logo-text">KarmaSync</div>
+        <img src="/logo.png" alt="LeadNest Logo" className="auth-logo" />
+        <div className="auth-logo-text">LeadNest</div>
       </div>
       <div className="auth-content">
         <div className="auth-card">

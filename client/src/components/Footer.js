@@ -5,9 +5,9 @@ const Footer = () => {
 
   return (
     <footer className="dashboard-footer">
-      &copy; {year} KarmaSync. Licensed under{" "}
+      &copy; {year} LeadNest. Licensed under{" "}
       <a    
-        href="https://github.com/bsurajpatra/KarmaSync_Info/blob/main/LICENSE"
+        href="https://github.com/tirugithubpati/LeadNest/blob/main/LICENSE"
         target="_blank"
         rel="noopener noreferrer"
         className="footer-link"

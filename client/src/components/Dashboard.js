@@ -102,9 +102,9 @@ const Dashboard = () => {
       <div className="dashboard-content">
         <div className="top-bar">
           <div className="header-left">
-            <img src="/logo.png" alt="KarmaSync" className="dashboard-logo" />
+            <img src="/logo.png" alt="LeadNest" className="dashboard-logo" />
             <div className="header-content">
-              <h1>Welcome to KarmaSync</h1>
+              <h1>Welcome to LeadNest</h1>
               <p className="dashboard-subtitle">Your productivity companion</p>
             </div>
           </div>
@@ -118,7 +118,7 @@ const Dashboard = () => {
           <div className="message-box">
             <h2>Maximize Your Productivity</h2>
             <p>
-            KarmaSync helps you manage projects, track tasks, and collaborate with your team. Stay organized, meet deadlines, and achieve goals with our powerful tools and features.
+            LeadNest helps you manage projects, track tasks, and collaborate with your team. Stay organized, meet deadlines, and achieve goals with our powerful tools and features.
             </p>
             <div className="message-footer">
               Here's what you can do:

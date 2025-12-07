@@ -83,11 +83,11 @@ const Contact = () => {
                         <div className="contact-details">
                             <div className="contact-item">
                                 <i className="fas fa-envelope"></i>
-                                <span>Mail : karmasync.official@gmail.com</span>
+                                <span>Mail : mtirupatipatra@gmail.com</span>
                             </div>
                             <div className="contact-item">
                                 <i className="fas fa-phone"></i>
-                                <span>Phone : +91 876 3232 589</span>
+                                <span>Phone : +91 637 0124 316</span>
                             </div>
                         </div>
                     </div>
